@@ -1,0 +1,8 @@
+<h1><%= @parent.name %></h1>
+
+<% @parent.students.each do |student|%>
+<ul>
+  <li><%= student.name %> - <%= link_to student.teacher.name, teacher_path(student.teacher) %></li>
+  <li><%= image_tag student.pic %></li>
+</ul>
+<% end %>

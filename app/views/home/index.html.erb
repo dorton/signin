@@ -1,0 +1,17 @@
+<h1>Welcome to <%= @school.name %> <%= @school.classification %></h1>
+
+<h2><%= @teachers.count %> Teachers</h2>
+<% @teachers.each do |teacher| %>
+  <ul>
+    <li><%= link_to teacher.name, teacher_path(teacher) %></li>
+  </ul>
+<% end %>
+
+
+<h2><%= @parents.count%> Parents</h2>
+
+<% @parents.each do |parent| %>
+  <ul>
+    <li><%= link_to parent.name, parent_path(parent) %></li>
+  </ul>
+<% end %>
